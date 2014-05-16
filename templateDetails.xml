@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.1" type="template" client="site" method="upgrade" >
+	<name>zoearthweb_01</name>
+	<creationDate>2013-12-04</creationDate>
+	<author>Zoearth</author>
+	<authorEmail>zoearthmoon@gmail.com</authorEmail>
+	<copyright>Copyright(C)</copyright>
+	<license></license>
+	<version>1.0.1</version>
+	<description>TPL_Z201_DESCRIPTION</description>
+
+	<files>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+        <folder>css</folder>
+		<folder>language</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>addJs.php</filename>
+        <filename>page_index.php</filename>
+        <filename>page_inside.php</filename>
+		<filename>z2favicon.ico</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>
+		<position>debug</position>
+		<position>TOP-LOGO</position>
+		<position>TOP-RIGHT</position>
+		<position>TOP-MENU</position>
+        <position>TOP-BANNER</position>
+		<position>INDEX-CENTER-LEFT</position>
+		<position>INDEX-CENTER-CENTER</position>
+        <position>BREADCRUME</position>
+        <position>MAIN-TOP</position>
+        <position>MAIN-LEFT</position>
+		<position>MAIN-RIGHT</position>
+		<position>MAIN-BOTTOM</position>
+        <position>PAGE-BOTTOM-LEFT</position>
+		<position>PAGE-BOTTOM-CENTER</position>
+        <position>PAGE-BOTTOM-RIGHT</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthweb_01.ini</language>
+		<language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthweb_01.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="favicon" type="media" default="" label="TPL_Z201_TOP_LEFT_LOGO" />
+                <field name="gacode" type="textarea" filter="raw" default="" label="TPL_GACODE" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
