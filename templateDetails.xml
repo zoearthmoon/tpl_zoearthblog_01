@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="3.1" type="template" client="site" method="upgrade" >
-	<name>zoearthweb_01</name>
+	<name>zoearthblog_01</name>
 	<creationDate>2013-12-04</creationDate>
 	<author>Zoearth</author>
 	<authorEmail>zoearthmoon@gmail.com</authorEmail>
 	<copyright>Copyright(C)</copyright>
 	<license></license>
-	<version>1.0.1</version>
-	<description>TPL_Z201_DESCRIPTION</description>
+	<version>1.0.0</version>
+	<description>TPL_Z2B01_DESCRIPTION</description>
 
 	<files>
 		<folder>html</folder>
@@ -37,6 +37,7 @@
         <position>TOP-BANNER</position>
 		<position>INDEX-CENTER-LEFT</position>
 		<position>INDEX-CENTER-CENTER</position>
+        <position>INDEX-CENTER-BOTTOM</position>
         <position>BREADCRUME</position>
         <position>MAIN-TOP</position>
         <position>MAIN-LEFT</position>
@@ -48,14 +49,14 @@
 	</positions>
 
 	<languages folder="language">
-		<language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthweb_01.ini</language>
-		<language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthweb_01.sys.ini</language>
+		<language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthblog_01.ini</language>
+		<language tag="zh-TW">zh-TW/zh-TW.tpl_zoearthblog_01.sys.ini</language>
 	</languages>
 
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
-				<field name="favicon" type="media" default="" label="TPL_Z201_TOP_LEFT_LOGO" />
+				<field name="favicon" type="media" default="" label="TPL_Z2B01_TOP_LEFT_LOGO" />
                 <field name="gacode" type="textarea" filter="raw" default="" label="TPL_GACODE" />
 			</fieldset>
 		</fields>

@@ -23,8 +23,11 @@ else
 $document = JFactory::getDocument();
 $headData = $document->getHeadData();
 $scripts = $headData['scripts'];
-//unset($scripts['/media/jui/js/chosen.jquery.min.js']);
-//$headData['scripts'] = $scripts;
+unset($scripts['/media/jui/js/chosen.jquery.min.js']);
+$headData['scripts'] = $scripts;
+
+
+
 $headData['script']['text/javascript'] = str_replace("jQuery('select').chosen","jQuery('selectNone').chosen",$headData['script']['text/javascript']);
 $document->setHeadData($headData);
 
@@ -34,6 +37,7 @@ $lang = JFactory::getLanguage();
 
 if ($menu->getActive() == $menu->getDefault($lang->getTag()))
 {
+    $document->addScript($tmpUrl.'js/init.js');
     require_once dirname(__FILE__).'/page_index.php';
 }
 else
