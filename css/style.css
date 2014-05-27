@@ -6,6 +6,17 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
+.navbar
+{
+    margin-bottom:0px;
+}
+
+.topButton
+{
+    max-height:50%;
+}
+
+
 	body {
 		background: #fff;
 	}
@@ -1037,7 +1048,7 @@
 	}
 	
 	body {
-		padding-top: 3em;
+		/*padding-top: 3em;*/
 	}
 
 	#logo {
