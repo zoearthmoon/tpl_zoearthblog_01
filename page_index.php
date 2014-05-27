@@ -20,7 +20,6 @@ defined('_JEXEC') or die;
             <jdoc:include type="modules" name="TOP-MENU" />
         </div>
     </nav>
-    <jdoc:include type="modules" name="TOP-BANNER" />
     <jdoc:include type="modules" name="INDEX-CENTER-CENTER" />
     <jdoc:include type="modules" name="INDEX-CENTER-BOTTOM" />
     <footer id="footer">
