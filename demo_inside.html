@@ -24,7 +24,7 @@
         <!-- Header -->
 
 
-    <nav class="navbar navbar-default navbar-static" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
@@ -70,6 +70,9 @@
               </ul>
             </li>
           </ul>
+<form class="navbar-form navbar-right">
+            <input type="text" placeholder="Search..." class="form-control">
+          </form>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container-fluid -->
     </nav> <!-- /navbar-example -->
@@ -79,126 +82,96 @@
   
 
 
-        <!-- Intro -->
-        <section id="intro" class="main style1 dark fullscreen">
-            <div class="content container small">
-                <header>
-                    <h2>Hey.</h2>
-                </header>
-                <p>Welcome to <strong>Big Picture</strong> a responsive site template designed
-                by <a href="http://html5up.net">HTML5 UP</a>, built on <a href="http://skeljs.org">skelJS</a>,
-                and released for free under the <a href="http://html5up.net/license/">Creative Commons Attribution 3.0 license</a>.</p>
-                <footer>
-                    <a href="#one" class="button style2 down">More</a>
-                </footer>
-            </div>
-        </section>
         
-        <!-- One -->
-        <section id="one" class="main style2 right dark fullscreen">
-            <div class="content box style2">
-                <header>
-                    <h2>What I Do</h2>
-                </header>
-                <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. 
-                Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, 
-                id varius justo euismod in. Curabitur egestas consectetur magna urna.</p>
-            </div>
-            <a href="#two" class="button style2 down anchored">Next</a>
-        </section>
+<div class="container main">
+
+      <div class="blog-header">
+        <h2 class="blog-title">The Bootstrap Blog</h2>
+      </div>
+
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Library</a></li>
+          <li class="active">Data</li>
+        </ol>
+
+      <div class="row">
+
+        <div class="col-sm-12 blog-main">
+
+          <div class="blog-post">
+            <h3 class="blog-post-title">Sample blog post</h3>
+            <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+
+            <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+            <hr>
+            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <blockquote>
+              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <h2>Heading</h2>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <h3>Sub-heading</h3>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <pre><code>Example code block</code></pre>
+            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+            <h3>Sub-heading</h3>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <ul>
+              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            <ol>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+            </ol>
+            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+          </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">Another blog post</h2>
+            <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
+
+            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <blockquote>
+              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          </div><!-- /.blog-post -->
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">New feature</h2>
+            <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
+
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <ul>
+              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+          </div><!-- /.blog-post -->
+
+
+
+          <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+          </ul>
+
+        </div><!-- /.blog-main -->
+
+      </div><!-- /.row -->
+
+    </div>
         
-        <!-- Two -->
-        <section id="two" class="main style2 left dark fullscreen">
-            <div class="content box style2">
-                <header>
-                    <h2>Who I Am</h2>
-                </header>
-                <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. 
-                Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, 
-                id varius justo euismod in. Curabitur egestas consectetur magna urna.</p>
-            </div>
-            <a href="#work" class="button style2 down anchored">Next</a>
-        </section>
         
-        <!-- Three -->
-        <section id="three" class="main style2 right dark fullscreen">
-            <div class="content box style2">
-                <header>
-                    <h2>I Am Three</h2>
-                </header>
-                <p>Three  Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. 
-                Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, 
-                id varius justo euismod in. Curabitur egestas consectetur magna urna.</p>
-            </div>
-            <a href="#work" class="button style2 down anchored">Next</a>
-        </section>
-        
-        <!-- Work -->
-        <section id="work" class="main style3 primary fullscreen">
-            <div class="content container">
-                <header>
-                    <h2>My Work</h2>
-                    <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. 
-                    Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis 
-                    arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae urna.</p>
-                </header>
-                
-                <!--
-                     Lightbox Gallery
-                     
-                     Powered by poptrox. Full docs here: https://github.com/n33/jquery.poptrox
-                -->
-                <div class="container small gallery">
-                    <div class="row flush images">
-                        <div class="6u"><a href="images/fulls/01.jpg" class="image full l"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a></div>
-                        <div class="6u"><a href="images/fulls/02.jpg" class="image full r"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a></div>
-                    </div>
-                    <div class="row flush images">
-                        <div class="6u"><a href="images/fulls/03.jpg" class="image full l"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a></div>
-                        <div class="6u"><a href="images/fulls/04.jpg" class="image full r"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a></div>
-                    </div>
-                    <div class="row flush images">
-                        <div class="6u"><a href="images/fulls/05.jpg" class="image full l"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a></div>
-                        <div class="6u"><a href="images/fulls/06.jpg" class="image full r"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-            
-        <!-- Contact -->
-        <section id="contact" class="main style3 secondary">
-            <div class="content container">
-                <header>
-                    <h2>Say Hello.</h2>
-                    <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
-                </header>
-                <div class="box container small">
-                    <!--
-                         Contact Form
-                         
-                         To get this working, place a script on your server to receive the form data, then
-                         point the "action" attribute to it (eg. action="http://mydomain.tld/mail.php").
-                         More on how it all works here: http://www.1stwebdesigner.com/tutorials/custom-php-contact-forms/
-                    -->
-                    <form method="post" action="#">
-                        <div class="row half">
-                            <div class="6u"><input type="text" name="name" placeholder="Name" /></div>
-                            <div class="6u"><input type="text" name="email" placeholder="Email" /></div>
-                        </div>
-                        <div class="row half">
-                            <div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-                        </div>
-                        <div class="row">
-                            <div class="12u">
-                                <ul class="actions">
-                                    <li><input type="submit" class="button" value="Send Message" /></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
             
         <!-- Footer -->
         <footer id="footer">
