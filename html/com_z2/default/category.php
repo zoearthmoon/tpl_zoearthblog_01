@@ -34,7 +34,9 @@ defined('_JEXEC') or die;
             <?php $preList = ceil(count($this->primary)/3); ?>
             <?php for ($c=1;$v<=3;$c++):?>
                 <?php for ($q=0+$c;$q<=count($this->primary);$q=$q+3):?>
+                    <?php if (isset($this->primary[$q])):?>
                     <?php $this->item = $this->primary[$q];echo $this->loadTemplate('item');?>
+                    <?php endif;?>
                 <?php endfor;?>
             <?php endfor;?>
         <?php endif; ?>

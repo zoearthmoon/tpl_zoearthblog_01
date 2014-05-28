@@ -53,7 +53,7 @@ defined('_JEXEC') or die;
                 <header>
                     <h2><?php echo $menuC['name'];?></h2>
                 </header>
-                <?php echo $menuC['description'];?>
+                <?php echo mb_substr(strip_tags($menuC['description']),0,30);?>...
             </div>
             <a href="#key<?php echo ($i+1)?>" class="button style2 down anchored">Next</a>
         </section>
