@@ -15,6 +15,7 @@ defined('_JEXEC') or die;
     <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo $tmpUrl;?>css/ie/v8.css" /><![endif]-->
 </head>
 <body>
+    <input type="hidden" id="basePath" value="<?php echo $tmpUrl;?>">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container-fluid">
             <jdoc:include type="modules" name="TOP-MENU" />

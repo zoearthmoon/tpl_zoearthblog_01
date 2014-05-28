@@ -11,4 +11,6 @@ $doc->addStyleSheet($tmpUrl.'css/style.css','text/css');
 
 $doc->addScript($tmpUrl.'bootstrap/js/bootstrap.min.js');
 $doc->addScript($tmpUrl.'js/jquery.poptrox.min.js');
+$doc->addScript($tmpUrl.'js/skel.min.js');
+
 ?>

@@ -4,14 +4,13 @@ defined('_JEXEC') or die;
 
 <div class="navbar-header">
     <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
-        <span class="sr-only"><?php echo $menus[1]['name']?></span>
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Project Name</a>
+    <a class="navbar-brand" href="#"><?php echo $menus[1]['name']?></a>
 </div>
-
 <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
 <?php foreach ($menus as $key=>$menu):?>
 <?php if ($key > 1):?>

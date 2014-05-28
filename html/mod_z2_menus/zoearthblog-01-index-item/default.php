@@ -1,11 +1,27 @@
 <?php
 defined('_JEXEC') or die;
+$tmpUrl = JUri::base().'templates/zoearthblog_01/';
 ?>
 <?php $i=0;?>
 <?php foreach ($menus as $menu):?>
     <?php $i++;?>
     <?php if ($i == 1):?>
-        <section id="intro" class="main style1 dark fullscreen">
+        <?php
+        if ($menu['image'])
+        {
+            $goImg = $menu['image'];
+        }
+        else
+        {
+            $goImg = $tmpUrl."images/intro.jpg";
+        }
+        ?>
+        <style type="text/css">
+        #introBanner {
+            background: url("<?php echo $tmpUrl?>css/images/overlay.png") repeat fixed left top / 256px 256px, url("<?php echo $goImg?>") repeat fixed center center / cover rgba(0, 0, 0, 0);
+        }
+        </style>
+        <section id="introBanner" class="main style1 dark fullscreen">
             <div class="content container small">
                 <header>
                     <h2><?php echo $menu['name'];?></h2>
@@ -16,7 +32,7 @@ defined('_JEXEC') or die;
                 </footer>
             </div>
         </section>
-    <?php elseif ($i == count($menus)):?>
+    <?php elseif ($i == count($menus)+1):?>
         <section id="key<?php echo $i?>" class="main style3 primary fullscreen">
             <div class="content container">
                 <header>
@@ -48,6 +64,21 @@ defined('_JEXEC') or die;
     <?php elseif (count($menu['menus']) > 0 ):?>
         <?php foreach ($menu['menus'] as $p=>$menuC):?>
         <?php $i = $i + $p;?>
+        <?php
+        if ($menuC['image'])
+        {
+            $goImg = $menuC['image'];
+        }
+        else
+        {
+            $goImg = $tmpUrl."images/one.jpg";
+        }
+        ?>
+        <style type="text/css">
+        #key<?php echo $i?> {
+            background: url("<?php echo $tmpUrl?>css/images/overlay.png") repeat fixed left top / 256px 256px, url("<?php echo $goImg?>") repeat fixed center center / cover rgba(0, 0, 0, 0);
+        }
+        </style>
         <section id="key<?php echo $i?>" class="main style2 <?php echo (($i % 2) == 0 ? 'right':'left')?> dark fullscreen">
             <div class="content box style2">
                 <header>
