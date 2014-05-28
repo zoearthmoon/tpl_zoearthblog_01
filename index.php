@@ -15,15 +15,18 @@ if (JFile::exists(JPATH_BASE.DS.$favicon))
 }
 else
 {
-    $favicon = '<link href="'.JUri::base().'templates/zoearthweb_01/z2favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />';
+    $favicon = '<link href="'.$tmpUrl.'z2favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />';
 }
 
 //20140121 zoearth 取消 "/media/jui/js/chosen.jquery.min.js"
 //這邊取消chosen這美化select的javascript因為會影響到手機板的功能
 $document = JFactory::getDocument();
 $headData = $document->getHeadData();
+
 $scripts = $headData['scripts'];
 unset($scripts['/media/jui/js/chosen.jquery.min.js']);
+unset($scripts['/media/jui/js/bootstrap.min.js']);
+
 $headData['scripts'] = $scripts;
 
 
