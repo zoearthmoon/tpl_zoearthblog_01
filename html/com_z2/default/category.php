@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
     <?php if($this->category->image): ?>
     <style type="text/css">
     #introBanner {
-        background: url("<?php echo Juri::base() ?>templates/tpl_zoearthblog_01/images/overlay.png") repeat fixed left top / 256px 256px, url("<?php echo Z2HelperImage::_($this->category->image,800,800); ?>") no-repeat fixed center bottom / cover rgba(0, 0, 0, 0) !important;
+        background: url("<?php echo Juri::base() ?>templates/tpl_zoearthblog_01/images/overlay.png") repeat fixed left top / 256px 256px, url("<?php echo Juri::base().Z2HelperImage::_($this->category->image,800,800); ?>") no-repeat fixed center bottom / cover rgba(0, 0, 0, 0) !important;
     }
     </style>
     <?php endif; ?>
@@ -37,8 +37,8 @@ defined('_JEXEC') or die;
             <?php for ($c=1;$c<=3;$c++):?>
             <div class="col-sm-6 col-md-4">
                 <?php for ($q=0+$c;$q<=count($this->primary);$q=$q+3):?>
-                    <?php if (isset($this->primary[$q])):?>
-                    <?php $this->item = $this->primary[$q];echo $this->loadTemplate('item');?>
+                    <?php if (isset($this->primary[$q-1])):?>
+                    <?php $this->item = $this->primary[$q-1];echo $this->loadTemplate('item');?>
                     <?php endif;?>
                 <?php endfor;?>
             </div>

@@ -14,7 +14,7 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
         }
         if ($menu['image'])
         {
-            $goImg = $menu['image'];
+            $goImg = Juri::base().Z2HelperImage::_($menu['image'],800,800);
         }
         else
         {
@@ -78,7 +78,7 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
         }
         else
         {
-            $goImg = Z2HelperImage::_($randPic[$randKeys[$p]],800,800);
+            $goImg = Juri::base().Z2HelperImage::_($randPic[$randKeys[$p]],800,800);
         }
         ?>
         <style type="text/css">
