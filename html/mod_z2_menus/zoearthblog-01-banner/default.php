@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die;
+$tmpUrl = JUri::base().'templates/zoearthblog_01/';
 ?>
 <?php $i=0;?>
 <?php foreach ($menus as $menu):?>
