@@ -36,6 +36,10 @@ defined('_JEXEC') or die;
 <?php endforeach; ?>
 </ul>
 <form method="get" action="<?php echo JRoute::_('index.php?option=com_search&view=search');?>" class="navbar-form navbar-right">
-    <input type="text" placeholder="請輸入關鍵字" name="searchword" class="form-control">
+    <div class="input-append">
+        <input type="text" placeholder="請輸入關鍵字" name="searchword" class="form-control" value="<?php echo JRequest::getVar('searchword','');?>" >
+        <button class="btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    </div>
+    
 </form>
 </div>
