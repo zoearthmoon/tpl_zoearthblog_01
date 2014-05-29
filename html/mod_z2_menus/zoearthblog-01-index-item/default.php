@@ -3,10 +3,15 @@ defined('_JEXEC') or die;
 $tmpUrl = JUri::base().'templates/zoearthblog_01/';
 ?>
 <?php $i=0;?>
-<?php foreach ($menus as $menu):?>
+<?php foreach ($menus as $k=>$menu):?>
     <?php $i++;?>
     <?php if ($i == 1):?>
         <?php
+        $randPic = array();
+        foreach ($menu['addPics'] as $pic)
+        {
+            $randPic[] = $pic->pic;
+        }
         if ($menu['image'])
         {
             $goImg = $menu['image'];
@@ -32,8 +37,8 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
                 </footer>
             </div>
         </section>
-    <?php elseif ($i == count($menus)+1):?>
-        <section id="key<?php echo $i?>" class="main style3 primary fullscreen">
+    <?php elseif ($k == 3):?>
+        <section id="key<?php echo $i-1?>" class="main style3 primary fullscreen">
             <div class="content container">
                 <header>
                     <h2><?php echo $menu['name'];?></h2>
@@ -62,8 +67,10 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
             </div>
         </section>
     <?php elseif (count($menu['menus']) > 0 ):?>
+        <?php
+        $randKeys = array_rand($randPic,count($menu['menus']));
+        ?>
         <?php foreach ($menu['menus'] as $p=>$menuC):?>
-        <?php $i = $i + $p;?>
         <?php
         if ($menuC['image'])
         {
@@ -71,7 +78,7 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
         }
         else
         {
-            $goImg = $tmpUrl."images/one.jpg";
+            $goImg = Z2HelperImage::_($randPic[$randKeys[$p]],800,800);
         }
         ?>
         <style type="text/css">
@@ -84,10 +91,16 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
                 <header>
                     <h2><?php echo $menuC['name'];?></h2>
                 </header>
-                <?php echo mb_substr(strip_tags($menuC['description']),0,30);?>...
+                <?php 
+                $goStr = substr(strip_tags($menuC['description']),0,350);
+                echo mb_substr($goStr,0,mb_strlen($goStr,'UTF-8')-1,'UTF-8').'...';
+                ?>
+                <a type="button" class="btn btn-info" href="<?php echo $menuC['link'];?>">More</a>
+                
             </div>
             <a href="#key<?php echo ($i+1)?>" class="button style2 down anchored">Next</a>
         </section>
+        <?php $i++;?>
         <?php endforeach;?>
     <?php endif;?>
 <?php endforeach; ?>

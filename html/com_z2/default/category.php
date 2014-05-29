@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die;
+
 ?>
 <!-- 分類 -->
 <!-- 這邊顯示分類與子分類  -->
@@ -13,17 +14,18 @@ defined('_JEXEC') or die;
     }
     </style>
     <?php endif; ?>
-    
-    <!-- 分類標題 Category title -->
-    <div class="blog-header">
-        <h2 class="blog-title"><?php echo $this->category->name; ?></h2>
-    </div>
-    <!-- 分類描述 Category description -->
-    <p><?php echo $this->category->description; ?></p>
-    
-    <!-- 外掛 請勿刪除 -->
-    <?php echo $this->category->event->Z2CategoryDisplay; ?>
 
+    <div class="container">
+        <!-- 分類標題 Category title -->
+        <div class="page-header">
+            <h2 class="blog-title"><?php echo $this->category->name; ?></h2>
+        </div>
+        <!-- 分類描述 Category description -->
+        <p><?php echo $this->category->description; ?></p>
+        
+        <!-- 外掛 請勿刪除 -->
+        <?php echo $this->category->event->Z2CategoryDisplay; ?>
+    </div>
 <?php endif; ?>
 
 <!-- 項目列表 Item list -->
@@ -32,12 +34,14 @@ defined('_JEXEC') or die;
         <!-- 是否有項目 Primary items -->
         <?php if(isset($this->primary) && count($this->primary)): ?>
             <?php $preList = ceil(count($this->primary)/3); ?>
-            <?php for ($c=1;$v<=3;$c++):?>
+            <?php for ($c=1;$c<=3;$c++):?>
+            <div class="col-sm-6 col-md-4">
                 <?php for ($q=0+$c;$q<=count($this->primary);$q=$q+3):?>
                     <?php if (isset($this->primary[$q])):?>
                     <?php $this->item = $this->primary[$q];echo $this->loadTemplate('item');?>
                     <?php endif;?>
                 <?php endfor;?>
+            </div>
             <?php endfor;?>
         <?php endif; ?>
     </div>

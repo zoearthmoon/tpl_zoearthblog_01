@@ -40,7 +40,6 @@ $lang = JFactory::getLanguage();
 
 if ($menu->getActive() == $menu->getDefault($lang->getTag()))
 {
-    $document->addScript($tmpUrl.'js/init.js');
     require_once dirname(__FILE__).'/page_index.php';
 }
 else

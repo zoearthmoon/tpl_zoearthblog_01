@@ -23,8 +23,10 @@ defined('_JEXEC') or die;
     </nav>
     <jdoc:include type="modules" name="TOP-BANNER" />
     
-    <div class="container main">
+    <div id="mainContent" class="main">
+        <div class="breadcrumb">
         <jdoc:include type="modules" name="BREADCRUME" />
+        </div>
 
         <jdoc:include type="message" />
         <jdoc:include type="component" />
