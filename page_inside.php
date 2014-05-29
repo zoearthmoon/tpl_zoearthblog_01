@@ -32,7 +32,7 @@ defined('_JEXEC') or die;
         <jdoc:include type="component" />
 
     </div>
-    
+    <jdoc:include type="modules" name="INDEX-CENTER-BOTTOM" />
     <footer id="footer">
         <div class="actions hidden-xs">
             <jdoc:include type="modules" name="PAGE-BOTTOM-LEFT" />
