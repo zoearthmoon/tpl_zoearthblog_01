@@ -9,8 +9,8 @@ defined('_JEXEC') or die;
     <!-- 分類圖片 Category image -->
     <?php if($this->category->image): ?>
     <style type="text/css">
-    #intro {
-        background: url("<?php echo Juri::base() ?>templates/tpl_zoearthblog_01/images/overlay.png") repeat fixed left top / 256px 256px, url("<?php echo Z2HelperImage::_($this->category->image,50); ?>") no-repeat fixed center bottom / cover rgba(0, 0, 0, 0);
+    #introBanner {
+        background: url("<?php echo Juri::base() ?>templates/tpl_zoearthblog_01/images/overlay.png") repeat fixed left top / 256px 256px, url("<?php echo Z2HelperImage::_($this->category->image,800,800); ?>") no-repeat fixed center bottom / cover rgba(0, 0, 0, 0) !important;
     }
     </style>
     <?php endif; ?>
