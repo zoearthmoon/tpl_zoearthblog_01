@@ -170,9 +170,9 @@ jQuery(document).ready(function() {
                                         }
 
 										// Work
-	                                     if (jQuery('#work').length)
+	                                     if (jQuery('.workSection').length)
                                          {
-                                            jQuery('#work')
+                                            jQuery('.workSection')
                                             .scrollwatch({
                                                 delay:      25,
                                                 range:      0.6,
@@ -245,7 +245,7 @@ jQuery(document).ready(function() {
 											.removeClass('inactive');
 								
 									// Work
-										jQuery('#work')
+										jQuery('.workSection')
 											.unscrollwatch()
 											.find('.row.images').removeClass('inactive');
 

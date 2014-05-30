@@ -38,7 +38,7 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
             </div>
         </section>
     <?php elseif ($k == 3):?>
-        <section id="key<?php echo $i-1?>" class="main style3 primary fullscreen">
+        <section id="key<?php echo $i-1?>" class="main style3 primary fullscreen workSection">
             <div class="content container">
                 <header>
                     <h2><?php echo $menu['name'];?></h2>
@@ -47,20 +47,22 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
                 <div class="container small gallery">
                     <?php if (count($menu['menus']) > 0 ):?>
                     <?php for ($k=0;$k<=count($menu['menus']);$k=$k+2):?>
-                    <div class="row flush images">
-                        <div class="6u">
-                            <a href="<?php echo Z2HelperImage::_($menu['menus'][$k]['image'],256,257)?>" class="image full l">
-                                <img src="<?php echo Z2HelperImage::_($menu['menus'][$k]['image'])?>" title="<?php echo $menu['menus'][$k]['name']?>" />
-                            </a>
-                        </div>
-                        <?php if (isset($menu['menus'][$k+1]['image'])):?>
-                        <div class="6u">
-                            <a href="<?php echo Z2HelperImage::_($menu['menus'][$k+1]['image'],256,257)?>" class="image full r">
-                                <img src="<?php echo Z2HelperImage::_($menu['menus'][$k+1]['image'])?>" title="<?php echo $menu['menus'][$k+1]['name']?>" />
-                            </a>
-                        </div>
-                        <?php endif;?>
-                    </div>
+						<?php if (isset($menu['menus'][$k]['image'])):?>
+						<div class="row flush images">
+							<div class="6u">
+								<a href="<?php echo Z2HelperImage::_($menu['menus'][$k]['image']) ?>" class="image full l">
+									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k]['image'],440,276)?>" title="<?php echo $menu['menus'][$k]['name']?>" />
+								</a>
+							</div>
+							<?php if (isset($menu['menus'][$k+1]['image'])):?>
+							<div class="6u">
+								<a href="<?php echo Z2HelperImage::_($menu['menus'][$k+1]['image'])?>" class="image full r">
+									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k+1]['image'],440,276)?>" title="<?php echo $menu['menus'][$k+1]['name']?>" />
+								</a>
+							</div>
+							<?php endif;?>
+						</div>
+						<?php endif;?>
                     <?php endfor;?>
                     <?php endif;?>
                 </div>
