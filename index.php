@@ -32,6 +32,9 @@ $headData['scripts'] = $scripts;
 
 
 $headData['script']['text/javascript'] = str_replace("jQuery('select').chosen","jQuery('selectNone').chosen",$headData['script']['text/javascript']);
+$headData['script']['text/javascript'] = str_replace("jQuery('selectNone').chosen","//jQuery('selectNone').chosen",$headData['script']['text/javascript']);
+
+
 $document->setHeadData($headData);
 
 $app = JFactory::getApplication();

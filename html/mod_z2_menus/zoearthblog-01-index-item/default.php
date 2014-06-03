@@ -90,9 +90,11 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
         </style>
         <section id="key<?php echo $i?>" class="main style2 <?php echo (($i % 2) == 0 ? 'right':'left')?> dark fullscreen">
             <div class="content box style2">
+                
                 <header>
                     <h2><?php echo $menuC['name'];?></h2>
                 </header>
+                
                 <?php 
                 $goStr = substr(strip_tags($menuC['description']),0,350);
                 echo mb_substr($goStr,0,mb_strlen($goStr,'UTF-8')-1,'UTF-8').'...';

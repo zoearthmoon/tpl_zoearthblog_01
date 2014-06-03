@@ -2,7 +2,7 @@
 defined('_JEXEC') or die;
 JHtml::_('formbehavior.chosen', 'select');
 ?>
-<div class="search<?php echo $this->pageclass_sfx; ?>">
+<div id="z2Container" class="itemView rows container search<?php echo $this->pageclass_sfx; ?>">
 <?php if ($this->params->get('show_page_heading', 1)) : ?>
 <h1 class="page-title">
 	<?php if ($this->escape($this->params->get('page_heading'))) :?>
@@ -13,46 +13,43 @@ JHtml::_('formbehavior.chosen', 'select');
 </h1>
 <?php endif; ?>
 
-
-<form id="searchForm" action="<?php echo JRoute::_('index.php?option=com_search');?>" method="post" class="form-horizontal" >
-    <div class="control-group">
-        <label class="control-label" for="inputEmail"><?php echo JText::_('COM_SEARCH_SEARCH_KEYWORD'); ?></label>
-        <div class="controls">
-            <div class="span3">
+<form id="searchForm" action="<?php echo JRoute::_('index.php?option=com_search');?>" method="post" class="form-horizontal" role="form" >
+    <div class="form-group">
+        <label class="col-sm-2 control-label" ><?php echo JText::_('COM_SEARCH_SEARCH_KEYWORD'); ?></label>
+        <div class="col-sm-4 input-group">
             <input type="text" name="searchword" placeholder="<?php echo JText::_('COM_SEARCH_SEARCH_KEYWORD'); ?>" id="search-searchword" maxlength="<?php echo $upper_limit; ?>" value="<?php echo $this->escape($this->origkeyword); ?>" class="inputbox" />
-            </div>
-            <div class="span2" >
-            <button name="Search" onclick="this.form.submit()" class="btn hasTooltip" title="<?php echo JHtml::tooltipText('COM_SEARCH_SEARCH');?>"><i class="icon-search"></i></button>
-            </div>
-        </div>
-        <input type="hidden" name="task" value="search" />
-    </div>
-
-    <div class="control-group">
-        <label class="control-label" for="inputEmail"></label>
-        <div class="controls">
-            <?php if (!empty($this->searchword)):?>
-            <p><?php echo JText::plural('COM_SEARCH_SEARCH_KEYWORD_N_RESULTS', '<b class="label label-success">'. $this->total. '</b>');?></p>
-            <?php endif;?>
+            <span class="input-group-btn">
+                <button name="Search" onclick="this.form.submit()" class="btn hasTooltip" title="<?php echo JHtml::tooltipText('COM_SEARCH_SEARCH');?>"><i class="glyphicon glyphicon-search"></i></button>
+            </span>
         </div>
     </div>
+    <input type="hidden" name="task" value="search" />
 
-    <div class="control-group">
-        <label class="control-label" for="inputEmail"><?php echo JText::_('COM_SEARCH_ORDERING');?></label>
-        <div class="controls">
-            <?php echo $this->lists['ordering'];?>
+    <div class="form-group">
+        <label class="col-sm-2 control-label"></label>
+        <div class="col-sm-4">
+        <?php if (!empty($this->searchword)):?>
+        <p><?php echo JText::plural('COM_SEARCH_SEARCH_KEYWORD_N_RESULTS', '<b class="label label-success">'. $this->total. '</b>');?></p>
+        <?php endif;?>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label"><?php echo JText::_('COM_SEARCH_ORDERING');?></label>
+        <div class="col-sm-4">
+        <?php echo $this->lists['ordering'];?>
         </div>
     </div>
 
     <input type="hidden" id="area-z2" value="z2" name="areas[]">
 
     <?php if ($this->total > 0) : ?>
-    <div class="control-group">
-        <label class="control-label" for="inputEmail"><?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?></label>
-        <div class="controls">
+    <div class="form-group">
+        <label class="col-sm-2 control-label" ><?php echo JText::_('JGLOBAL_DISPLAY_NUM'); ?></label>
+        <div class="col-sm-4">
             <?php echo $this->pagination->getLimitBox(); ?>
         </div>
-        <div class="controls">
+        <div class="col-sm-4">
             <?php echo $this->pagination->getPagesCounter(); ?>
         </div>
     </div>

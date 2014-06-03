@@ -30,7 +30,7 @@ defined('_JEXEC') or die;
 
 <!-- 項目列表 Item list -->
 <?php if(isset($this->primary) && count($this->primary) > 0): ?>
-    <div class="rows">
+    <div class="rows container">
         <!-- 是否有項目 Primary items -->
         <?php if(isset($this->primary) && count($this->primary)): ?>
             <?php $preList = ceil(count($this->primary)/3); ?>
@@ -45,10 +45,11 @@ defined('_JEXEC') or die;
             <?php endfor;?>
         <?php endif; ?>
     </div>
-    <div class="z2Pagination">
+    <div class="z2Pagination container">
         <!-- 跳頁 Pagination -->
-        <?php echo $this->pagination->getPagesLinks(); ?>
+        <?php echo str_replace('<ul','<ul class="pagination" ',$this->pagination->getPagesLinks()); ?>
+        
         <!-- 頁數統計 -->
-        <?php echo $this->pagination->getPagesCounter(); ?>
+        <span class="label label-default"><?php echo $this->pagination->getPagesCounter(); ?></span>
     </div>
 <?php endif; ?>

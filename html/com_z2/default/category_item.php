@@ -13,7 +13,12 @@ defined('_JEXEC') or die;
     </a>
     <div class="caption">
     
-        <h3><?php echo $this->item->title; ?><small><?php echo JHTML::_('date',$this->item->created,JText::_('Z2_DATE_FORMAT_LC2'));?></small></h3>
+        <h3>
+            <a href="<?php echo $this->item->link; ?>">
+                <?php echo $this->item->title; ?>
+            </a>
+            <small><?php echo JHTML::_('date',$this->item->created,JText::_('Z2_DATE_FORMAT_LC2'));?></small>
+        </h3>
 
         <!-- 顯示是否為頂置 -->
         <?php if($this->item->featured): ?>
