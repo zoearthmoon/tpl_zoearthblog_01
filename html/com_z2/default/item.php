@@ -56,8 +56,8 @@ defined('_JEXEC') or die;
         <?php foreach ($this->item->addPic as $pic):?>
         <?php if (Z2HelperImage::exist($pic['pic'])):?>
         <div class="col-xs-4 col-md-2">
-            <a rel="lightbox" href="<?php echo $pic['pic']; ?>" class="thumbnail">
-                <img src="<?php echo Z2HelperImage::_($pic['pic'],171,180); ?>" title="<?php echo $pic['title']; ?>" alt="<?php echo $pic['title']; ?>" />
+            <a rel="lightbox" href="<?php echo $pic['pic']; ?>" class="thumbnail" title="<?php echo $pic['title']; ?>" alt="<?php echo $pic['title']; ?>" >
+                <img src="<?php echo Z2HelperImage::_($pic['pic'],171,180); ?>" />
             </a>
         </div>
         <?php endif;?>
