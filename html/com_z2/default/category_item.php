@@ -8,9 +8,11 @@ defined('_JEXEC') or die;
     <?php echo $this->item->event->Z2BeforeDisplay; ?>
     
     <!-- 項目圖片 -->
+    <?php if (Z2HelperImage::exist($this->item->image)):?>
     <a href="<?php echo $this->item->link; ?>" title="<?php if(!empty($this->item->image_caption)) echo Z2HelperUtilities::cleanHtml($this->item->image_caption); else echo Z2HelperUtilities::cleanHtml($this->item->title); ?>">
         <img src="<?php echo Z2HelperImage::_($this->item->image,300,200); ?>" alt="<?php if(!empty($this->item->image_caption)) echo Z2HelperUtilities::cleanHtml($this->item->image_caption); else echo Z2HelperUtilities::cleanHtml($this->item->title); ?>" />
     </a>
+    <?php endif;?>
     <div class="caption">
     
         <h3>

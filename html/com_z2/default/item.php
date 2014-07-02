@@ -30,9 +30,9 @@ defined('_JEXEC') or die;
         </span>
         
         <!-- 圖片 Item Image -->
-        <?php if(!empty($this->item->image)): ?>
-            <a rel="lightbox" href="<?php echo Z2HelperImage::_($this->item->image); ?>" title="<?php echo JText::_('Z2_CLICK_TO_PREVIEW_IMAGE'); ?>">
-                <img src="<?php echo Z2HelperImage::_($this->item->image); ?>" alt="<?php if(!empty($this->item->image_caption)) echo Z2HelperUtilities::cleanHtml($this->item->image_caption); else echo Z2HelperUtilities::cleanHtml($this->item->title); ?>" style="width:<?php echo $this->item->imageWidth; ?>px; height:auto;" />
+        <?php if (Z2HelperImage::exist($this->item->image)):?>
+            <a rel="lightbox" href="<?php echo Z2HelperImage::_($this->item->image); ?>" title="<?php echo $this->item->image_caption; ?>" alt="<?php echo $this->item->image_caption; ?>" >
+                <img class="thumbnail" src="<?php echo Z2HelperImage::_($this->item->image); ?>" title="<?php echo $this->item->image_caption; ?>" alt="<?php echo $this->item->image_caption; ?>" />
             </a>
         <?php endif; ?>
         
@@ -54,11 +54,13 @@ defined('_JEXEC') or die;
     <?php if(!empty($this->item->addPic)): ?>
     <div class="row">
         <?php foreach ($this->item->addPic as $pic):?>
+        <?php if (Z2HelperImage::exist($pic['pic'])):?>
         <div class="col-xs-4 col-md-2">
             <a rel="lightbox" href="<?php echo $pic['pic']; ?>" class="thumbnail">
-                <img src="<?php echo Z2HelperImage::_($pic['pic'],171,180); ?>" alt="<?php echo $pic['title']; ?>" />
+                <img src="<?php echo Z2HelperImage::_($pic['pic'],171,180); ?>" title="<?php echo $pic['title']; ?>" alt="<?php echo $pic['title']; ?>" />
             </a>
         </div>
+        <?php endif;?>
         <?php endforeach;?>
     </div>
     <?php endif; ?>
