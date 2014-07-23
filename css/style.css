@@ -1169,9 +1169,14 @@
 				.workSection .row.images.inactive .image.l {
 					left: -14em;
 				}
-			
+				.workSection .row.images.inactive .image.l2 {
+					left: -28em;
+				}
 				.workSection .row.images.inactive .image.r {
 					left: 14em;
+				}
+				.workSection .row.images.inactive .image.r2 {
+					left: 28em;
 				}
 			
 /*********************************************************************************/
