@@ -10,7 +10,7 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
         $randPic = array();
         foreach ($menu['addPics'] as $pic)
         {
-            $randPic[] = $pic->pic;
+            $randPic[] = Z2HelperImage::_($pic['pic'],800,800);
         }
         if ($menu['image'])
         {
@@ -90,11 +90,11 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
         <?php
         if ($menuC['image'])
         {
-            $goImg = $menuC['image'];
+            $goImg = Z2HelperImage::_($menuC['image'],800,800);
         }
         else
         {
-            $goImg = Juri::base().Z2HelperImage::_($randPic[$randKeys[$p]],800,800);
+            $goImg = Juri::base().$randPic[$randKeys[$p]];
         }
         ?>
         <style type="text/css">
