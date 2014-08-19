@@ -2,7 +2,12 @@
 defined('_JEXEC') or die;
 ?>
 <!-- 這邊是項目詳細頁 -->
-
+<style type="text/css">
+#z2Container img
+{
+	max-width:95%;
+}
+</style>
 <!-- 開始項目主頁面輸出 Start Z2 Item Layout -->
 <div id="z2Container" class="itemView container">
 
