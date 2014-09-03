@@ -19,7 +19,7 @@ defined('_JEXEC') or die;
             <a href="<?php echo $this->item->link; ?>">
                 <?php echo $this->item->title; ?>
             </a>
-            <small><?php echo JHTML::_('date',$this->item->created,JText::_('Z2_DATE_FORMAT_LC2'));?></small>
+            <small><?php echo JHTML::_('date',$this->item->created,JText::_('Y年m月d日'));?></small>
         </h3>
 
         <!-- 顯示是否為頂置 -->

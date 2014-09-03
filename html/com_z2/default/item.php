@@ -31,7 +31,7 @@ defined('_JEXEC') or die;
         
         <!-- 創建日期 Date created -->
         <span class="itemDateCreated label label-info">
-            <?php echo JHTML::_('date', $this->item->created , JText::_('Z2_DATE_FORMAT_LC2')); ?>
+            <?php echo JHTML::_('date', $this->item->created , 'Y年m月d日'); ?>
         </span>
         
         <!-- 圖片 Item Image -->
