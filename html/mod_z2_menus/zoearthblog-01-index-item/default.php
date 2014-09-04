@@ -52,26 +52,26 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
 							<?php if (isset($menu['menus'][$k+2]['image'])):?>
 							<div class="6u2">
 								<a href="<?php echo Z2HelperImage::_($menu['menus'][$k+2]['image'])?>" class="image full l2">
-									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k+2]['image'],250,250,'F')?>" title="<?php echo $menu['menus'][$k+2]['name']?>" />
+									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k+2]['image'],200,200,'F')?>" title="<?php echo $menu['menus'][$k+2]['name']?>" />
 								</a>
 							</div>
 							<?php endif;?>
 							<div class="6u2">
 								<a href="<?php echo Z2HelperImage::_($menu['menus'][$k]['image']) ?>" class="image full l">
-									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k]['image'],250,250,'F')?>" title="<?php echo $menu['menus'][$k]['name']?>" />
+									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k]['image'],200,200,'F')?>" title="<?php echo $menu['menus'][$k]['name']?>" />
 								</a>
 							</div>
 							<?php if (isset($menu['menus'][$k+1]['image'])):?>
 							<div class="6u2">
 								<a href="<?php echo Z2HelperImage::_($menu['menus'][$k+1]['image'])?>" class="image full r">
-									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k+1]['image'],250,250,'F')?>" title="<?php echo $menu['menus'][$k+1]['name']?>" />
+									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k+1]['image'],200,200,'F')?>" title="<?php echo $menu['menus'][$k+1]['name']?>" />
 								</a>
 							</div>
 							<?php endif;?>
 							<?php if (isset($menu['menus'][$k+3]['image'])):?>
 							<div class="6u2">
 								<a href="<?php echo Z2HelperImage::_($menu['menus'][$k+3]['image'])?>" class="image full r2">
-									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k+3]['image'],250,250,'F')?>" title="<?php echo $menu['menus'][$k+3]['name']?>" />
+									<img src="<?php echo Z2HelperImage::_($menu['menus'][$k+3]['image'],200,200,'F')?>" title="<?php echo $menu['menus'][$k+3]['name']?>" />
 								</a>
 							</div>
 							<?php endif;?>
