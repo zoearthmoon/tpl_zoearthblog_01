@@ -10,7 +10,7 @@ defined('_JEXEC') or die;
     <?php if($this->category->image): ?>
     <style type="text/css">
     #introBanner {
-        background: url("<?php echo Juri::base() ?>templates/tpl_zoearthblog_01/images/overlay.png") repeat fixed left top / 256px 256px, url("<?php echo Juri::base().Z2HelperImage::_($this->category->image,800,800); ?>") no-repeat fixed center bottom / cover rgba(0, 0, 0, 0) !important;
+        background: url("<?php echo Juri::base() ?>templates/zoearthblog_01/images/overlay.png") repeat fixed left top / 256px 256px, url("<?php echo Juri::base().Z2HelperImage::_($this->category->image,800,800); ?>") no-repeat fixed center bottom / cover rgba(0, 0, 0, 0) !important;
     }
     </style>
     <?php endif; ?>
