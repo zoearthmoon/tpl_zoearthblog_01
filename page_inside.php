@@ -27,9 +27,10 @@ defined('_JEXEC') or die;
         <div class="breadcrumb">
         <jdoc:include type="modules" name="BREADCRUME" />
         </div>
-
+		<jdoc:include type="modules" name="MAIN-TOP" />
         <jdoc:include type="message" />
         <jdoc:include type="component" />
+		<jdoc:include type="modules" name="MAIN-BOTTOM" />
 
     </div>
     <jdoc:include type="modules" name="INDEX-CENTER-BOTTOM" />
