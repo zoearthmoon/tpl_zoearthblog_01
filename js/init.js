@@ -65,56 +65,50 @@ jQuery(document).ready(function() {
 /*********************************************************************************/
 
 	// skel
-		skel.init(_settings.skel);
+	skel.init(_settings.skel);
 
 	// jQuery
-		jQuery(function() {
+	jQuery(function()
+	{
+		var $window = jQuery(window),
+		$body = jQuery('body'),
+		$header = jQuery('#header'),
+		$all = $body.add($header),
+		sectionTransitionState = false;
 
-			var $window = jQuery(window),
-				$body = jQuery('body'),
-				$header = jQuery('#header'),
-				$all = $body.add($header),
-				sectionTransitionState = false;
-
-			// Disable animations/transitions until everything's loaded
-				$all
-					.addClass('loading')
-					.fadeTo(0, 0.0001);
-				
-				$window.load(function() {
-					window.setTimeout(function() {
-						$all
-							.fadeTo(_settings.fadeInSpeed, 1, function() {
-								$body.removeClass('loading');
-								$all.fadeTo(0, 1);
-							});
-					}, _settings.fadeInSpeed);
+		// Disable animations/transitions until everything's loaded
+		//$all.addClass('loading').fadeTo(0, 0.0001);
+			
+		$window.load(function() {
+			window.setTimeout(function() {
+				$all.fadeTo(_settings.fadeInSpeed, 1, function() {
+					//$body.removeClass('loading');
+					//$all.fadeTo(0, 1);
 				});
-				
-			// Settings overrides
+			}, _settings.fadeInSpeed);
+		});
+		
+		// Settings overrides
 			
-				// IE <= 9?
-					if (skel.vars.IEVersion <= 9)
-						_settings.useSectionTransitions = false;
+		// IE <= 9?
+		if (skel.vars.IEVersion <= 9)
+			_settings.useSectionTransitions = false;
 			
-				// Touch?
-					if (skel.vars.isTouch) {
+		// Touch?
+		if (skel.vars.isTouch)
+		{
+			// Disable section transitions
+			_settings.useSectionTransitions = false;
+			// Turn on touch mode
+			$body.addClass('touch');
+		}
 					
-						// Disable section transitions
-							_settings.useSectionTransitions = false;
-							
-						// Turn on touch mode
-							$body.addClass('touch');
-					
-					}
-					
-				// Mobile?
-					if (skel.isActive('mobile')) {
-					
-						// Reduce poptrox windowMargin
-							_settings.poptrox.windowMargin = 5;
-					
-					}
+		// Mobile?
+		if (skel.isActive('mobile'))
+		{
+			// Reduce poptrox windowMargin
+			_settings.poptrox.windowMargin = 5;
+		}
 
 			// Forms
 				if (skel.vars.IEVersion < 10)
