@@ -27,13 +27,16 @@ $scripts = $headData['scripts'];
 unset($scripts['/media/jui/js/chosen.jquery.min.js']);
 unset($scripts['/media/jui/js/bootstrap.min.js']);
 
+unset($scripts['/media/system/js/modal.js']);//20140915 zoearth 取消mootools
+unset($scripts['/media/system/js/mootools-core.js']);
+unset($scripts['/media/system/js/mootools-more.js']);
+
 $headData['scripts'] = $scripts;
-
-
 
 $headData['script']['text/javascript'] = str_replace("jQuery('select').chosen","jQuery('selectNone').chosen",$headData['script']['text/javascript']);
 $headData['script']['text/javascript'] = str_replace("jQuery('selectNone').chosen","//jQuery('selectNone').chosen",$headData['script']['text/javascript']);
 
+$headData['script']['text/javascript'] = str_replace("SqueezeBox.","return false;SqueezeBox.",$headData['script']['text/javascript']);
 
 $document->setHeadData($headData);
 
