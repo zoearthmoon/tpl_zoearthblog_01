@@ -24,7 +24,7 @@ defined('_JEXEC') or die;
     <jdoc:include type="modules" name="INDEX-CENTER-CENTER" />
     <jdoc:include type="modules" name="INDEX-CENTER-BOTTOM" />
     <footer id="footer">
-        <div class="actions hidden-xs">
+        <div class="actions">
             <jdoc:include type="modules" name="PAGE-BOTTOM-LEFT" />
         </div>
         <div class="menu text-right">
