@@ -1,5 +1,6 @@
 <?php
 defined('_JEXEC') or die;
+$aLangs = Z2HelperLang::getActiveLang();
 ?>
 
 <div class="navbar-header">
@@ -10,6 +11,9 @@ defined('_JEXEC') or die;
         <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" href="<?php echo Juri::base();?>"><?php echo $menus[1]['name']?></a>
+	
+	<div class="btn-group" id="langSwitchGo">
+	</div>
 </div>
 <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
 <ul class="nav navbar-nav navbar-right">
