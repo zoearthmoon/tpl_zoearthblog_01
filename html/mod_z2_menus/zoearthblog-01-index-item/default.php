@@ -90,7 +90,7 @@ $tmpUrl = JUri::base().'templates/zoearthblog_01/';
         <?php
         if ($menuC['image'])
         {
-            $goImg = Z2HelperImage::_($menuC['image'],800,800);
+            $goImg = JUri::base().Z2HelperImage::_($menuC['image'],800,800);
         }
         else
         {

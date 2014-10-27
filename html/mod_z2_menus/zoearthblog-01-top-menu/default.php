@@ -41,7 +41,7 @@ $aLangs = Z2HelperLang::getActiveLang();
 </ul>
 <form method="get" action="<?php echo JRoute::_('index.php?option=com_search&view=search');?>" class="navbar-form navbar-right">
     <div class="input-append">
-        <input type="text" placeholder="請輸入關鍵字" name="searchword" class="form-control" value="<?php echo JRequest::getVar('searchword','');?>" >
+        <input type="text" placeholder="<?php echo JText::_('TPL_Z2B01_PLS_INPUT_KEYWORD') ?>" name="searchword" class="form-control" value="<?php echo JRequest::getVar('searchword','');?>" >
         <button class="btn" type="submit"><i class="glyphicon glyphicon-search"></i></button>
     </div>
     
