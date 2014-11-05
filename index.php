@@ -34,7 +34,7 @@ unset($scripts['/media/system/js/mootools-more.js']);
 $headData['scripts'] = $scripts;
 
 $styleSheets = $headData['styleSheets'];
-unset($styleSheets['/joomla3/media/system/css/modal.css']);
+unset($styleSheets['/media/system/css/modal.css']);
 $headData['styleSheets'] = $styleSheets;
 
 $headData['script']['text/javascript'] = str_replace("jQuery('select').chosen","jQuery('selectNone').chosen",$headData['script']['text/javascript']);
